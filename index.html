@@ -448,6 +448,7 @@
     <a href="https://linkedin.com/in/vishaal-sai-devisetty-9a1a35261" target="_blank" class="nav-logo">VSD</a>
     <ul class="nav-links">
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
@@ -485,6 +486,147 @@
       </div>
     </div>
   </section>
+
+  <hr class="divider">
+
+<section id="pipeline" style="padding-top:5rem;padding-bottom:5rem;max-width:1100px;margin:0 auto;padding-left:4rem;padding-right:4rem;">
+  <div class="reveal">
+    <div class="section-label">How I Work</div>
+    <h2 class="section-title">The ML Pipeline</h2>
+  </div>
+  <div class="reveal" style="margin-top:1.5rem;">
+    <div id="pipeline-widget" style="background:#FFFFFF;border:1px solid #E0DBCF;border-radius:4px;padding:2rem;">
+
+      <style>
+        @keyframes vsd-flow { to { stroke-dashoffset: -24; } }
+        .vsd-flow { stroke-dasharray:6 6; animation: vsd-flow 1.6s linear infinite; }
+        .vsd-nd { cursor:pointer; transition:opacity .2s; }
+        .vsd-nd:hover { opacity:.75; }
+        .vsd-info { border-top:1px solid #E0DBCF; margin-top:16px; padding-top:14px; min-height:60px; }
+        .vsd-pill { display:inline-block; font-size:11px; font-weight:500; padding:2px 9px; border-radius:20px; margin:2px 3px; font-family:'DM Sans',sans-serif; }
+        .vsd-node-title { font-family:'DM Serif Display',serif; font-size:13px; fill:#1A1814; }
+        .vsd-node-sub { font-family:'DM Sans',sans-serif; font-size:11px; fill:#7A7468; }
+        .vsd-caption { font-family:'DM Sans',sans-serif; font-size:11px; fill:#7A7468; }
+      </style>
+
+      <svg width="100%" viewBox="0 0 680 240" style="display:block">
+        <defs>
+          <marker id="vsd-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </marker>
+        </defs>
+
+        <!-- Stage 1: Data -->
+        <g class="vsd-nd" onclick="vsdShow('data')">
+          <rect x="20" y="30" width="110" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text class="vsd-node-title" x="75" y="50" text-anchor="middle" dominant-baseline="central">Data</text>
+          <text class="vsd-node-sub" x="75" y="68" text-anchor="middle" dominant-baseline="central">Ingest · clean · store</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('data')">
+          <rect x="20" y="102" width="50" height="34" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="45" y="119" text-anchor="middle" dominant-baseline="central">SQL</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('data')">
+          <rect x="80" y="102" width="50" height="34" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="105" y="119" text-anchor="middle" dominant-baseline="central">Spark</text>
+        </g>
+        <line x1="55" y1="78" x2="45" y2="102" stroke="#0F6E56" stroke-width="0.5"/>
+        <line x1="95" y1="78" x2="105" y2="102" stroke="#0F6E56" stroke-width="0.5"/>
+        <line class="vsd-flow" x1="132" y1="54" x2="158" y2="54" stroke="#0F6E56" stroke-width="1.5" fill="none" marker-end="url(#vsd-ar)"/>
+
+        <!-- Stage 2: Features -->
+        <g class="vsd-nd" onclick="vsdShow('features')">
+          <rect x="162" y="30" width="110" height="48" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text class="vsd-node-title" x="217" y="50" text-anchor="middle" dominant-baseline="central">Features</text>
+          <text class="vsd-node-sub" x="217" y="68" text-anchor="middle" dominant-baseline="central">Engineer · transform</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('features')">
+          <rect x="162" y="102" width="50" height="34" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="187" y="119" text-anchor="middle" dominant-baseline="central">RFM</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('features')">
+          <rect x="222" y="102" width="50" height="34" rx="6" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="247" y="119" text-anchor="middle" dominant-baseline="central">Lags</text>
+        </g>
+        <line x1="197" y1="78" x2="187" y2="102" stroke="#0F6E56" stroke-width="0.5"/>
+        <line x1="237" y1="78" x2="247" y2="102" stroke="#0F6E56" stroke-width="0.5"/>
+        <line class="vsd-flow" x1="274" y1="54" x2="300" y2="54" stroke="#888780" stroke-width="1.5" fill="none" marker-end="url(#vsd-ar)"/>
+
+        <!-- Stage 3: Modelling -->
+        <g class="vsd-nd" onclick="vsdShow('model')">
+          <rect x="304" y="30" width="110" height="48" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+          <text class="vsd-node-title" x="359" y="50" text-anchor="middle" dominant-baseline="central">Modelling</text>
+          <text class="vsd-node-sub" x="359" y="68" text-anchor="middle" dominant-baseline="central">Train · evaluate · tune</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('model')">
+          <rect x="304" y="102" width="50" height="34" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="329" y="119" text-anchor="middle" dominant-baseline="central">XGBoost</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('model')">
+          <rect x="364" y="102" width="50" height="34" rx="6" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="389" y="119" text-anchor="middle" dominant-baseline="central">LLMs</text>
+        </g>
+        <line x1="339" y1="78" x2="329" y2="102" stroke="#5F5E5A" stroke-width="0.5"/>
+        <line x1="379" y1="78" x2="389" y2="102" stroke="#5F5E5A" stroke-width="0.5"/>
+        <line class="vsd-flow" x1="416" y1="54" x2="442" y2="54" stroke="#534AB7" stroke-width="1.5" fill="none" marker-end="url(#vsd-ar)"/>
+
+        <!-- Stage 4: Deployment -->
+        <g class="vsd-nd" onclick="vsdShow('deploy')">
+          <rect x="446" y="30" width="110" height="48" rx="8" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+          <text class="vsd-node-title" x="501" y="50" text-anchor="middle" dominant-baseline="central">Deployment</text>
+          <text class="vsd-node-sub" x="501" y="68" text-anchor="middle" dominant-baseline="central">Serve · version · scale</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('deploy')">
+          <rect x="446" y="102" width="50" height="34" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="471" y="119" text-anchor="middle" dominant-baseline="central">FastAPI</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('deploy')">
+          <rect x="506" y="102" width="50" height="34" rx="6" fill="#EEEDFE" stroke="#534AB7" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="531" y="119" text-anchor="middle" dominant-baseline="central">Docker</text>
+        </g>
+        <line x1="481" y1="78" x2="471" y2="102" stroke="#534AB7" stroke-width="0.5"/>
+        <line x1="521" y1="78" x2="531" y2="102" stroke="#534AB7" stroke-width="0.5"/>
+        <line class="vsd-flow" x1="558" y1="54" x2="584" y2="54" stroke="#C75B3A" stroke-width="1.5" fill="none" marker-end="url(#vsd-ar)"/>
+
+        <!-- Stage 5: Monitor -->
+        <g class="vsd-nd" onclick="vsdShow('monitor')">
+          <rect x="588" y="30" width="72" height="48" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+          <text class="vsd-node-title" x="624" y="48" text-anchor="middle" dominant-baseline="central">Monitor</text>
+          <text class="vsd-node-sub" x="624" y="66" text-anchor="middle" dominant-baseline="central">Drift · evals</text>
+        </g>
+        <g class="vsd-nd" onclick="vsdShow('monitor')">
+          <rect x="588" y="102" width="72" height="34" rx="6" fill="#FAECE7" stroke="#993C1D" stroke-width="0.5"/>
+          <text class="vsd-node-sub" x="624" y="119" text-anchor="middle" dominant-baseline="central">PSI · RAGAS</text>
+        </g>
+        <line x1="624" y1="78" x2="624" y2="102" stroke="#993C1D" stroke-width="0.5"/>
+
+        <!-- Feedback loop -->
+        <path d="M624 136 Q624 200 340 200 Q56 200 56 136" fill="none" stroke="#E0DBCF" stroke-width="0.5" stroke-dasharray="4 4" marker-end="url(#vsd-ar)"/>
+        <text class="vsd-caption" x="340" y="218" text-anchor="middle">continuous improvement loop</text>
+      </svg>
+
+      <div class="vsd-info" id="vsd-info">
+        <p style="font-size:0.85rem;color:#7A7468;margin:0;font-family:'DM Sans',sans-serif;">Click any stage to explore what happens there.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+var vsdData = {
+  data:     { label:'Data', bg:'#E1F5EE', color:'#0F6E56', tags:['Pandas','PySpark','Snowflake','Kafka','Airflow','dbt'], text:'Everything starts with raw data — ingesting from APIs, databases, streams, and files. Cleaning, deduplication, schema validation, and loading into a reliable store.' },
+  features: { label:'Feature Engineering', bg:'#E1F5EE', color:'#0F6E56', tags:['RFM','Lag features','Embeddings','TF-IDF','SHAP','Scalers'], text:'Turning raw data into signals the model can learn from. Rolling windows, lag features, RFM scores, text embeddings, domain-specific aggregations.' },
+  model:    { label:'Modelling', bg:'#F1EFE8', color:'#5F5E5A', tags:['XGBoost','LightGBM','LSTM','BERT','Llama-3','QLoRA'], text:'Training and evaluating models — classical ML for tabular tasks, deep learning for sequences and images, LLMs for language. Hyperparameter tuning, cross-validation, fairness testing.' },
+  deploy:   { label:'Deployment', bg:'#EEEDFE', color:'#534AB7', tags:['FastAPI','MLflow','SageMaker','Docker','CI/CD','REST APIs'], text:'Packaging models into production services. Versioning artifacts, building REST endpoints, containerising with Docker, deploying to cloud infrastructure with reproducible releases.' },
+  monitor:  { label:'Monitoring', bg:'#FAECE7', color:'#993C1D', tags:['PSI drift','RAGAS','Hallucination checks','Logging','Alerting','A/B tests'], text:'Keeping models honest in production. Detecting data drift via PSI, evaluating RAG pipelines with RAGAS, logging inference for audit, and running regression tests on every push.' }
+};
+function vsdShow(k) {
+  var s = vsdData[k];
+  var tags = s.tags.map(function(t){ return '<span class="vsd-pill" style="background:'+s.bg+';color:'+s.color+'">'+t+'</span>'; }).join('');
+  document.getElementById('vsd-info').innerHTML = '<p style="font-size:0.88rem;font-weight:500;margin:0 0 5px;color:#1A1814;font-family:\'DM Serif Display\',serif;">'+s.label+'</p><p style="font-size:0.85rem;color:#7A7468;margin:0 0 8px;line-height:1.65;font-family:\'DM Sans\',sans-serif;">'+s.text+'</p><div>'+tags+'</div>';
+}
+</script>
 
   <hr class="divider">
 
